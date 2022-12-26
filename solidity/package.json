@@ -1,0 +1,17 @@
+{
+  "name": "eip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "compile": "truffle compile",
+    "deploy-goerli": "truffle deploy --network goerli",
+    "deploy-matic": "truffle deploy --network matic",
+    "dev1": "truffle migrate --network development1",
+    "dev2": "truffle migrate --network development2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

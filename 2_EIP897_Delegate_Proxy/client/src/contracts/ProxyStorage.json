@@ -336,20 +336,20 @@
   "sourceMap": "57:292:3:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "57:292:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;252:95;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;85:35;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;252:95;301:7;335:4;320:20;;252:95;:::o;85:35::-;;;;;;;;;;;;:::o;7:126:4:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.1;\n\ncontract ProxyStorage {\n    address public logicContractAddress;\n\n    function setLogicAddressStorage(address _logicContract) internal {\n        logicContractAddress = _logicContract;\n    }\n\n    function _contractAddress() public view returns (address) {\n        return address(this);\n    }\n}\n",
-  "sourcePath": "/home/neosoft/S/EIP/EIP-897_Proxy/solidity/contracts/ProxyStorage.sol",
+  "sourcePath": "/home/neosoft/S/NeoSoft/Upgrade-Smart-Contract-and-Smart-Contract-Proxies/2_EIP897_Delegate_Proxy/solidity/contracts/ProxyStorage.sol",
   "ast": {
     "absolutePath": "project:/contracts/ProxyStorage.sol",
     "exportedSymbols": {
       "ProxyStorage": [
-        189
+        290
       ]
     },
-    "id": 190,
+    "id": 291,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 165,
+        "id": 266,
         "literals": [
           "solidity",
           "^",
@@ -366,9 +366,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 189,
+        "id": 290,
         "linearizedBaseContracts": [
-          189
+          290
         ],
         "name": "ProxyStorage",
         "nameLocation": "66:12:3",
@@ -377,12 +377,12 @@
           {
             "constant": false,
             "functionSelector": "bccda810",
-            "id": 167,
+            "id": 268,
             "mutability": "mutable",
             "name": "logicContractAddress",
             "nameLocation": "100:20:3",
             "nodeType": "VariableDeclaration",
-            "scope": 189,
+            "scope": 290,
             "src": "85:35:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -391,7 +391,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 166,
+              "id": 267,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "85:7:3",
@@ -405,23 +405,23 @@
           },
           {
             "body": {
-              "id": 176,
+              "id": 277,
               "nodeType": "Block",
               "src": "192:54:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 174,
+                    "id": 275,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 172,
+                      "id": 273,
                       "name": "logicContractAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 167,
+                      "referencedDeclaration": 268,
                       "src": "202:20:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -431,11 +431,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 173,
+                      "id": 274,
                       "name": "_logicContract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 169,
+                      "referencedDeclaration": 270,
                       "src": "225:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -448,13 +448,13 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 175,
+                  "id": 276,
                   "nodeType": "ExpressionStatement",
                   "src": "202:37:3"
                 }
               ]
             },
-            "id": 177,
+            "id": 278,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -462,17 +462,17 @@
             "nameLocation": "136:22:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 170,
+              "id": 271,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 169,
+                  "id": 270,
                   "mutability": "mutable",
                   "name": "_logicContract",
                   "nameLocation": "167:14:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 177,
+                  "scope": 278,
                   "src": "159:22:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -481,7 +481,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 168,
+                    "id": 269,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "159:7:3",
@@ -497,12 +497,12 @@
               "src": "158:24:3"
             },
             "returnParameters": {
-              "id": 171,
+              "id": 272,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "192:0:3"
             },
-            "scope": 189,
+            "scope": 290,
             "src": "127:119:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -510,7 +510,7 @@
           },
           {
             "body": {
-              "id": 187,
+              "id": 288,
               "nodeType": "Block",
               "src": "310:37:3",
               "statements": [
@@ -518,14 +518,14 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 184,
+                        "id": 285,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967268,
                         "src": "335:4:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ProxyStorage_$189",
+                          "typeIdentifier": "t_contract$_ProxyStorage_$290",
                           "typeString": "contract ProxyStorage"
                         }
                       }
@@ -533,11 +533,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_ProxyStorage_$189",
+                          "typeIdentifier": "t_contract$_ProxyStorage_$290",
                           "typeString": "contract ProxyStorage"
                         }
                       ],
-                      "id": 183,
+                      "id": 284,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -549,14 +549,14 @@
                         "typeString": "type(address)"
                       },
                       "typeName": {
-                        "id": 182,
+                        "id": 283,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "327:7:3",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 185,
+                    "id": 286,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -572,15 +572,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 181,
-                  "id": 186,
+                  "functionReturnParameters": 282,
+                  "id": 287,
                   "nodeType": "Return",
                   "src": "320:20:3"
                 }
               ]
             },
             "functionSelector": "37988767",
-            "id": 188,
+            "id": 289,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -588,23 +588,23 @@
             "nameLocation": "261:16:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 178,
+              "id": 279,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "277:2:3"
             },
             "returnParameters": {
-              "id": 181,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 180,
+                  "id": 281,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 188,
+                  "scope": 289,
                   "src": "301:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -613,7 +613,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 179,
+                    "id": 280,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "301:7:3",
@@ -628,14 +628,14 @@
               ],
               "src": "300:9:3"
             },
-            "scope": 189,
+            "scope": 290,
             "src": "252:95:3",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 190,
+        "scope": 291,
         "src": "57:292:3",
         "usedErrors": []
       }
@@ -648,7 +648,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-02-03T06:16:54.975Z",
+  "updatedAt": "2023-02-10T10:05:13.986Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

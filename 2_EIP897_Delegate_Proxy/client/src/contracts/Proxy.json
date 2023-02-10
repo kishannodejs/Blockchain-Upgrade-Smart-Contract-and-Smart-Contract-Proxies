@@ -858,7 +858,7 @@
   "sourceMap": "86:1144:2:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "86:1144:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;708:13;724:20;;;;;;;;;;;708:36;;795:4;789:11;834:14;831:1;826:3;813:36;927:1;924;908:14;903:3;896:5;889;876:53;954:16;1006:4;1003:1;998:3;983:28;1032:6;1056:1;1051:56;;;;1158:4;1153:3;1146:17;1051:56;1088:4;1083:3;1076:17;252:95:3;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;85:35;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;305:175:2;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;252:95:3;301:7;335:4;320:20;;252:95;:::o;85:35::-;;;;;;;;;;;;:::o;305:175:2:-;371:44;400:14;371:28;:44::i;:::-;458:14;430:43;;446:10;430:43;;;;;;;;;;;;305:175;:::o;127:119:3:-;225:14;202:20;;:37;;;;;;;;;;;;;;;;;;127:119;:::o;7:126:4:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o;674:117::-;783:1;780;773:12;920:122;993:24;1011:5;993:24;:::i;:::-;986:5;983:35;973:63;;1032:1;1029;1022:12;973:63;920:122;:::o;1048:139::-;1094:5;1132:6;1119:20;1110:29;;1148:33;1175:5;1148:33;:::i;:::-;1048:139;;;;:::o;1193:329::-;1252:6;1301:2;1289:9;1280:7;1276:23;1272:32;1269:119;;;1307:79;;:::i;:::-;1269:119;1427:1;1452:53;1497:7;1488:6;1477:9;1473:22;1452:53;:::i;:::-;1442:63;;1398:117;1193:329;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.1;\nimport \"./ProxyStorage.sol\";\n\ncontract Proxy is ProxyStorage {\n    // constructor(address _logicContract) {\n    //     setLogicAddress(_logicContract);\n    // }\n    event LogicAddressSet(address indexed _setBy, address indexed _logicContract);\n\n    function setLogicAddress(address _logicContract) public {\n        super.setLogicAddressStorage(_logicContract);\n        emit LogicAddressSet(msg.sender, _logicContract);\n    }\n\n    /**\n     * @dev Fallback function allowing to perform a delegatecall to the given implementation.\n     * This function will return whatever the implementation call returns\n     */\n    fallback() external payable {\n        address _impl = logicContractAddress;\n\n        assembly {\n            let ptr := mload(0x40)\n            calldatacopy(ptr, 0, calldatasize())\n            let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)\n            let size := returndatasize()\n            returndatacopy(ptr, 0, size)\n\n            switch result\n            case 0 {\n                revert(ptr, size)\n            }\n            default {\n                return(ptr, size)\n            }\n        }\n    }\n\n    receive() external payable {}\n}\n",
-  "sourcePath": "/home/neosoft/S/EIP/EIP-897_Proxy/solidity/contracts/Proxy.sol",
+  "sourcePath": "/home/neosoft/S/NeoSoft/Upgrade-Smart-Contract-and-Smart-Contract-Proxies/2_EIP897_Delegate_Proxy/solidity/contracts/Proxy.sol",
   "ast": {
     "absolutePath": "project:/contracts/Proxy.sol",
     "exportedSymbols": {
@@ -1652,10 +1652,15 @@
     "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
   },
   "networks": {
-   
+    "80001": {
+      "events": {},
+      "links": {},
+      "address": "0x5072D303c7Dd1049c3F93e345bCC8A25A3868408",
+      "transactionHash": "0x0855a5af80fecc48ff77478b6a37ab1ee480619f9bc1b8ac16004e77b5fb85b7"
+    }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-02-10T08:44:24.594Z",
+  "updatedAt": "2023-02-10T10:16:31.389Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

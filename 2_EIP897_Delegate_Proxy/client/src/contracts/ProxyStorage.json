@@ -1,0 +1,662 @@
+{
+  "contractName": "ProxyStorage",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "logicContractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "_contractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_contractAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"logicContractAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ProxyStorage.sol\":{\"keccak256\":\"0xf6b0c48d1012a10a9aa341fd23937d4589ac6a32577def304d2b8cb9d01875e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d9fb7da9d0270c963c9fef03691073b7be6dee0216b8efb78d6919dfcfb13e34\",\"dweb:/ipfs/QmNRJFFM4VjLgcoa37Ep5Lzb2uMYhnWbM7wMBMJVtBtXnJ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610123806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806337988767146037578063bccda810146051575b600080fd5b603d606b565b6040516048919060d4565b60405180910390f35b60576073565b6040516062919060d4565b60405180910390f35b600030905090565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600060c0826097565b9050919050565b60ce8160b7565b82525050565b600060208201905060e7600083018460c7565b9291505056fea26469706673582212208140f0dca99caf9a6e28d3ca4b31b9475b6f83ab27d8991ea2bdd4747ea500ab64736f6c63430008110033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806337988767146037578063bccda810146051575b600080fd5b603d606b565b6040516048919060d4565b60405180910390f35b60576073565b6040516062919060d4565b60405180910390f35b600030905090565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600060c0826097565b9050919050565b60ce8160b7565b82525050565b600060208201905060e7600083018460c7565b9291505056fea26469706673582212208140f0dca99caf9a6e28d3ca4b31b9475b6f83ab27d8991ea2bdd4747ea500ab64736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:590:4",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "52:81:4",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "62:65:4",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "77:5:4"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "84:42:4",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "73:3:4"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "73:54:4"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "62:7:4"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "34:5:4",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "44:7:4",
+                "type": ""
+              }
+            ],
+            "src": "7:126:4"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "184:51:4",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "194:35:4",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "223:5:4"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "205:17:4"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "205:24:4"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "194:7:4"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "166:5:4",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "176:7:4",
+                "type": ""
+              }
+            ],
+            "src": "139:96:4"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "306:53:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "323:3:4"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "346:5:4"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_address",
+                          "nodeType": "YulIdentifier",
+                          "src": "328:17:4"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "328:24:4"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "316:6:4"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "316:37:4"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "316:37:4"
+                }
+              ]
+            },
+            "name": "abi_encode_t_address_to_t_address_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "294:5:4",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "301:3:4",
+                "type": ""
+              }
+            ],
+            "src": "241:118:4"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "463:124:4",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "473:26:4",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "485:9:4"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "496:2:4",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "481:3:4"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "481:18:4"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "473:4:4"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "553:6:4"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "566:9:4"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "577:1:4",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "562:3:4"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "562:17:4"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_address_to_t_address_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "509:43:4"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "509:71:4"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "509:71:4"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_address__to_t_address__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "435:9:4",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "447:6:4",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "458:4:4",
+                "type": ""
+              }
+            ],
+            "src": "365:222:4"
+          }
+        ]
+      },
+      "contents": "{\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n}\n",
+      "id": 4,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "57:292:3:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:292:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;252:95;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;85:35;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;252:95;301:7;335:4;320:20;;252:95;:::o;85:35::-;;;;;;;;;;;;:::o;7:126:4:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.1;\n\ncontract ProxyStorage {\n    address public logicContractAddress;\n\n    function setLogicAddressStorage(address _logicContract) internal {\n        logicContractAddress = _logicContract;\n    }\n\n    function _contractAddress() public view returns (address) {\n        return address(this);\n    }\n}\n",
+  "sourcePath": "/home/neosoft/S/EIP/EIP-897_Proxy/solidity/contracts/ProxyStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ProxyStorage.sol",
+    "exportedSymbols": {
+      "ProxyStorage": [
+        189
+      ]
+    },
+    "id": 190,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 165,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ProxyStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 189,
+        "linearizedBaseContracts": [
+          189
+        ],
+        "name": "ProxyStorage",
+        "nameLocation": "66:12:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "bccda810",
+            "id": 167,
+            "mutability": "mutable",
+            "name": "logicContractAddress",
+            "nameLocation": "100:20:3",
+            "nodeType": "VariableDeclaration",
+            "scope": 189,
+            "src": "85:35:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 166,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "85:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 176,
+              "nodeType": "Block",
+              "src": "192:54:3",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 172,
+                      "name": "logicContractAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 167,
+                      "src": "202:20:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 173,
+                      "name": "_logicContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 169,
+                      "src": "225:14:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "202:37:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "202:37:3"
+                }
+              ]
+            },
+            "id": 177,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLogicAddressStorage",
+            "nameLocation": "136:22:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 170,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 169,
+                  "mutability": "mutable",
+                  "name": "_logicContract",
+                  "nameLocation": "167:14:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "159:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 168,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "159:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:24:3"
+            },
+            "returnParameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "192:0:3"
+            },
+            "scope": 189,
+            "src": "127:119:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 187,
+              "nodeType": "Block",
+              "src": "310:37:3",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 184,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967268,
+                        "src": "335:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ProxyStorage_$189",
+                          "typeString": "contract ProxyStorage"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_ProxyStorage_$189",
+                          "typeString": "contract ProxyStorage"
+                        }
+                      ],
+                      "id": 183,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "327:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": {
+                        "id": 182,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "327:7:3",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 185,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "327:13:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 181,
+                  "id": 186,
+                  "nodeType": "Return",
+                  "src": "320:20:3"
+                }
+              ]
+            },
+            "functionSelector": "37988767",
+            "id": 188,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_contractAddress",
+            "nameLocation": "261:16:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "277:2:3"
+            },
+            "returnParameters": {
+              "id": 181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 188,
+                  "src": "301:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 179,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "301:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "300:9:3"
+            },
+            "scope": 189,
+            "src": "252:95:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 190,
+        "src": "57:292:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:318:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-02-03T06:16:54.975Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
